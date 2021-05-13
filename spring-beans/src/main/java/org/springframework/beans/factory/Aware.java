@@ -22,6 +22,19 @@ package org.springframework.beans.factory;
  * The actual method signature is determined by individual subinterfaces but should
  * typically consist of just one void-returning method that accepts a single argument.
  *
+ * 一个超级接口的标记， 指示Spring容器可以通过回调样式方法将bean通知给特定的框架对象
+ * 实际的方法签名是由各个子接口确定的，但通常应仅由一个接受单个参数的void返回方法组成。
+ *
+ * 感知
+ * 实现了此接口，就与容器有个耦合，就能感知到容器的一些资源
+ *
+ * Spring container of a particular framework object
+ * 特定框架对象的Spring容器
+ *
+ * eg. 子接口 如 {@link BeanNameAware}
+ *
+ *
+ *
  * <p>Note that merely implementing {@link Aware} provides no default functionality.
  * Rather, processing must be done explicitly, for example in a
  * {@link org.springframework.beans.factory.config.BeanPostProcessor}.
